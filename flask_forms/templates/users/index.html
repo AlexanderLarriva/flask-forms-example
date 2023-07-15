@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Example application</title>
+</head>
+
+<body>
+  <!-- BEGIN (write your solution here) -->
+  <!-- <form class="" name="find_users" method="POST" action="/users"> -->
+  <form class="" name="find_users" method="GET" action="/users">
+    <input name="term" type="search" placeholder="Search by name" value="{{ term }}">
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    {% for user in filtered_user_list %}
+    <li>{{ user.first_name }}</li>
+    {% endfor %}
+  </ul>
+  <!-- END -->
+</body>
+
+</html>
